@@ -13,9 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 public class ProductoCreateDto {
 
 	
-	@Id
-	@ApiModelProperty(notes = "ID " )
-	private int id;
+
 	@ApiModelProperty(notes = "producto")
 	private String producto;
 	@ApiModelProperty(notes = "fecha")
@@ -32,13 +30,6 @@ public class ProductoCreateDto {
 		
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getProducto() {
 		return producto;
@@ -72,12 +63,14 @@ public class ProductoCreateDto {
 		this.estado = estado;
 	}
 
+
 	@Override
 	public String toString() {
-		return "paginaPrincipalCreateDto [id=" + id + ", producto=" + producto + ", fecha=" + fecha + ", cantidad="
-				+ cantidad + ", estado=" + estado + "]";
+		return "ProductoCreateDto [producto=" + producto + ", fecha=" + fecha + ", cantidad=" + cantidad + ", estado="
+				+ estado + ", paginaPrincipalEntity=" + paginaPrincipalEntity + "]";
 	}
 
+	
 	
 
 	

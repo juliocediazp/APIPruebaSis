@@ -21,4 +21,7 @@ public interface productoRepository extends JpaRepository<ProductoEntity, Intege
 			"    ROWNUM>=  ?1")
 	List<ProductoEntity> listaProductos(int pagIni , int pagFin);
 	
+	@Query(nativeQuery = true , value = "select * from Producto order by id asc")
+	List<ProductoEntity> listId() ;
+	
 }

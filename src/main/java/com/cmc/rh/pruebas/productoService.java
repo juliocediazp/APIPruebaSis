@@ -1,6 +1,7 @@
 package com.cmc.rh.pruebas;
 
 import java.net.URI;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -97,8 +98,14 @@ public class productoService {
 	@ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, allowEmptyValue = false, paramType = "header", dataTypeClass = String.class, example = "Ingrese el token para iniciar")
     @PostMapping()
 	public ResponseEntity <Object> crearProducto(@ModelAttribute("ProductoCreateDto")ProductoCreateDto productoCreateDto  ){
-		ProductoEntity productoEntity = new   ProductoEntity();
-		   productoEntity.setId(productoCreateDto.getId());
+		 int idActual = 0;
+		 ProductoEntity productoEntity = new   ProductoEntity();
+		 List<ProductoEntity> lista = productoRepository.listId();
+		 for (ProductoEntity prod : lista) {
+			 idActual	= prod.getId();
+			 
+		}
+		   productoEntity.setId(idActual + 1);
 		   productoEntity.setProducto(productoCreateDto.getProducto());
 		   productoEntity.setFecha(productoCreateDto.getFecha());
 		   productoEntity.setCantidad(productoCreateDto.getCantidad());
