@@ -1,0 +1,10 @@
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (01,'carne','12/11/2020','35','activo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (02,'pollo','12/11/2020','30','inactivo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (03,'pescado','12/11/2020','12','activo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (04,'cerdo','12/11/2020','22','inactivo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (05,'maiz','12/11/2020','10','activo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (06,'arroz','12/11/2020','10','activo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (07,'cerveza','12/11/2020','10','activo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (08,'chunchullo','12/11/2020','10','activo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (09,'mamona','12/11/2020','10','activo');
+INSERT INTO Producto (id,producto,fecha,cantidad,estado) VALUES (10,'chicharrom','12/11/2020','10','activo');
